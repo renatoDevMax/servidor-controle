@@ -16,6 +16,7 @@ export class TempoService {
 
   @Cron('0 23 * * *', {
     timeZone: 'America/Sao_Paulo',
+    name: 'atualizacao-tempo-diaria',
   })
   async atualizarTempo() {
     try {
