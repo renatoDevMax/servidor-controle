@@ -3,7 +3,7 @@ import { HydratedDocument } from 'mongoose';
 
 export type ClienteFiliadoDocument = HydratedDocument<ClienteFiliado>;
 
-@Schema()
+@Schema({ collection: 'clienteFiliado' })
 export class ClienteFiliado {
   @Prop({ required: true })
   nome: string;
@@ -38,7 +38,7 @@ export class ClienteFiliado {
   @Prop({ required: true })
   senha: string;
 
-  @Prop({ required: true })
+  @Prop({ type: Number, required: true })
   tempo: number;
 }
 
